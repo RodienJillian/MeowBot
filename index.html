@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <script src="scripts/script.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dakq2u8n0/image/upload/v1740928683/DALL_E_2025-03-02_01.09.35_-_A_high-energy_and_modern_logo_for_Lotto_Dash_an_online_lottery_platform._The_design_should_feature_sleek_futuristic_typography_with_a_motion_effec_zqtv9e.png">
+        <title>Lotto Dash</title>
+    </head>
+    <body>
+        <div id="responsive-container">
+            <header>
+                <div class="shine-effect"></div>
+                <img id="logo-img" src="images/meowbot.png">
+                <h1 class="title"><span class="meow">Meow</span><span class="bot">Bot</span></h1>
+                <p class="description">In partial fullfilment for Natural Language Processing</p>
+                <p class="description">Developed by Rey Arby Castro and Rodien Jillian Ellorando</p>
+
+            </header>
+            <main>
+                <h1>Introduction</h1>
+                <p>MeowBot is an interactive chatbot that can understand GenZ words.</p>
+                
+                <h1>Features</h1>
+                <ul>
+                    <li>Purr-sonalized Responses: Context-aware replies with memory of user details</li>
+                    <li>Gen Z Slang Ready: Understands modern internet language ("slay", "no cap", "sus")</li>
+                    <li>Typo Tolerant: Uses fuzzy matching to understand misspelled words</li>
+                    <li>Emotion Detection: Analyzes sentiment in messages to respond appropriately</li>
+                    <li>Dual Interfaces: Choose between command-line or graphical interface</li>
+                    <li>Customizable: Easily add new response patterns or change the theme</li>
+                </ul>
+
+                <h1>Logic behind it </h1>
+                <ol>
+                    <li>Typo Handling: Uses Levenshtein distance to correct common misspellings</li>
+                    <li>Intent Matching: Compares input against patterns with fuzzy matching</li>
+                    <li>Sentiment Analysis: Detects emotional tone using Gen Z slang dictionary</li>
+                    <li>Context Integration: References previous conversations for continuity</li>
+                </ol>
+
+                <h1>Sample Screenshots</h1>
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/A1.png">
+                        <img src="images/A2.png">
+                        <img src="images/A3.png">
+                        <img src="images/A4.png">
+                        <img src="images/A5.png">
+                        <img src="images/A6.png">
+                    
+                    </div>
+                    <button class="prev"><</button>
+                    <button class="next">></button>
+                </div>
+
+                <h1>Project Structure</h1>
+                    <h2>text_processor.py</h2>
+                        <ul>
+                            <li><strong>Levenshtein Distance:</strong> Measures text similarity for fuzzy matching</li>
+                            <li><strong>Tokenization & Stemming:</strong> Breaks down sentences for analysis</li>
+                            <li><strong>Pattern Matching:</strong> Finds closest matches to known phrases</li>
+                        </ul>
+
+                    <h2>sentiment_analyzer.py</h2>
+                        <ul>
+                            <li><strong>Gen Z Slang Dictionary:</strong> Recognizes modern internet language</li>
+                            <li><strong>Emoji Analysis:</strong> Interprets emoji sentiment values</li>
+                            <li><strong>Intensity Modifiers:</strong> Detects words like "very" or "kinda"</li>
+                        </ul>
+
+                    <h2>data_manager.py</h2>
+                        <ul>
+                            <li><strong>Conversation Memory:</strong> Stores chat history and user context</li>
+                            <li><strong>Intent Storage:</strong> Manages response patterns in JSON</li>
+                            <li><strong>Session Tracking:</strong> Maintains conversation counts</li>
+                        </ul>
+
+                    <h2>chatbot.py</h2>
+                        <ul>
+                            <li><strong>Response Generation:</strong> Combines intent matching with sentiment analysis</li>
+                            <li><strong>Context Awareness:</strong> References remembered user details</li>
+                            <li><strong>Error Handling:</strong> Gracefully manages unrecognized inputs</li>
+                        </ul>
+
+            </main>
+            <footer>
+                Documented by <a>Rodien Jillian</a>
+            </footer>
+        </div>
+    </body>
+</html>

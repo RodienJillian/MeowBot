@@ -1,0 +1,142 @@
+header {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Golden gradient */
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3); /* Gold shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine Effect - New Addition */
+.shine-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: shine 3s ease-in-out infinite;
+    z-index: 1;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        left: 150%;
+        opacity: 0.6;
+    }
+}
+
+/* Existing Orb Animations */
+header::before,
+header::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    animation: float-orb 20s infinite alternate ease-in-out;
+    z-index: 0;
+    filter: blur(25px);
+}
+
+header::before {
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(101, 67, 33, 0.3) 0%, transparent 70%);
+    top: -50px;
+    left: -50px;
+    animation-delay: 0s;
+}
+
+header::after {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(139, 90, 43, 0.25) 0%, transparent 70%);
+    bottom: -100px;
+    right: -100px;
+    animation-delay: -5s;
+}
+
+header {
+    position: relative;
+}
+header::after {
+    box-shadow: -100px -100px 0 150px rgba(121, 77, 36, 0.2);
+}
+
+@keyframes float-orb {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    33% {
+        transform: translate(50px, 30px) scale(1.2);
+    }
+    66% {
+        transform: translate(-30px, -50px) scale(0.8);
+    }
+    100% {
+        transform: translate(0, 0) scale(1.1);
+    }
+}
+
+/* Content Styling (z-index increased to appear above shine) */
+#logo-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #faf4d9;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease; /* Changed to 'all' for smoother transitions */
+}
+
+#logo-img:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    filter: brightness(1.1); /* Optional: Adds slight glow on hover */
+}
+
+.title {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    position: relative;
+    z-index: 2; /* Increased from 1 to 2 */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -1px;
+}
+
+.meow {
+    color: #8B4513;
+}
+
+.bot {
+    color: #faf4d9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header::before {
+        width: 200px;
+        height: 200px;
+    }
+    header::after {
+        width: 250px;
+        height: 250px;
+    }
+}
